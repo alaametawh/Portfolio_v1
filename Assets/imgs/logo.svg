@@ -1,0 +1,13 @@
+<svg width="400" height="400" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- A left leg (foreground) -->
+  <path d="M 20 85 L 50 15" 
+        stroke="#5F3777" stroke-width="12" stroke-linecap="round" fill="none" />
+
+  <!-- M main body (behind) -->
+  <path d="M 20 85 L 20 25 L 50 65 L 80 25 L 80 85" 
+        stroke="#A4B7D5" stroke-width="12" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+
+  <!-- A right leg (foreground) -->
+  <path d="M 50 15 L 80 85" 
+        stroke="#5F3777" stroke-width="12" stroke-linecap="round" fill="none" />
+</svg>
