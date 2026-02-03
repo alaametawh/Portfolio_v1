@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Assets/imgs/logo.svg" type="image/svg+xml">
     <!-- CSS -->
-     <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <!-- External JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Alaaeldin .M</title>
     <!-- Theme Toggle and Save -->
      <script>
@@ -17,8 +19,9 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navbar -->
         <div class="navbar">
-            <div class="navcircle navimg"></div>
+            <a class="navcircle navimg" href="#home"></a>
             <div class="navlinks">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -26,6 +29,25 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="navcircle Toggle-theme"></div>
+        </div>
+        <!-- Home/Hero -->
+        <div id="home" class="section">
+            <div id="hero">
+                <div id="heroImgContainer">
+                    <div class="heroImg"></div>
+                </div>
+                <div class="info">
+                    <p class="header">I'M <span class="highlight">Alaaeldin .M</span></p>
+                    <div>
+                        <span class="subheader typed"></span>
+                    </div>
+                    <a class="btn" href="#contact">CONTACT ME</a>
+                </div>
+            </div>
+        </div>
+        <!-- About -->
+        <div id="about" class="section">
+
         </div>
     </div>
     <!-- JS -->
