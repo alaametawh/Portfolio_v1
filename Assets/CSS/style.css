@@ -72,27 +72,38 @@ body {
     height: 80px;
 }
 .section {
+    padding-top: 150px;
     min-height: 100dvh;
-    width: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
 }
 .header {
     font-size: clamp(40px, 30px + 3vw, 120px);
     color: var(--text);
     font-weight: 900;
-    width: max-content;
     margin-bottom: 24px;
 }
 .subheader {
-    font-size: clamp(35px, 15px + 3vw, 115px);
+    font-size: clamp(30px, 10px + 3vw, 110px);
     color: var(--text);
     font-weight: 600;
-    width: max-content;
+}
+.text {
+    font-size: clamp(24px, 14px + 1dvw, 48px);
+    color: var(--text);
+    font-weight: 400;
+    line-height: 1.6;
 }
 .highlight {
+    display: inline-block;
     color: var(--accent);
+    width: max-content;
 }
+.text .highlight {border-bottom: 2px solid var(--accent)}
 .typed-cursor {
     font-size: clamp(35px, 15px + 3vw, 115px);
+    color: var(--accent);
 }
 .btn {
     cursor: pointer;
@@ -102,6 +113,7 @@ body {
     color: var(--text);
     background-color: var(--primary);
     padding: 25px 10px;
+    border: 2px solid var(--primary);
     border-radius: 48px;
     font-size: clamp(20px, 10px + 2vw, 27px);
     margin-top: 48px;
@@ -174,14 +186,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 #hero {
-    margin-top: 150px;
     border-radius: 32px;
-    background-image: linear-gradient(var(--gradient));
     display: flex;
     width: 95%;
-    min-height: 50dvh;
+    min-height: 70dvh;
     padding: 15px;
     gap: 20px;
 }
@@ -189,8 +200,8 @@ body {
     background: var(--logo) center/cover no-repeat;
     background-color: var(--background);
     border-radius: 50%;
-    width: clamp(270px, 150px + 24dvw, 700px);
-    height: clamp(270px, 150px + 24dvw, 700px);
+    width: clamp(270px, 150px + 22dvw, 700px);
+    height: clamp(270px, 150px + 22dvw, 700px);
 }
 #heroImgContainer {
     flex: 1;
@@ -203,9 +214,62 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+.arrow {
+    position: relative; 
+    height: calc(28dvh - 160px);
+    width: 50px;
+    margin-top: 24px;
+}
+.arrow svg {
+    position: absolute;
+    fill: var(--secondary);
+    animation: up-down 1s ease-in-out infinite;
+}
+@keyframes up-down {
+    0%, 100% {top: 0%;}
+    50% {top: 50%;}
 }
 
-@media (max-width: 645px) {
+/* About */
+.skills {
+    flex: 1;
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.skillcard {
+    width: max(150px, 100px + 7vw);
+    height: calc(max(150px, 100px + 7vw) + 50px);
+}
+
+.skillimg {
+    background-image: linear-gradient(var(--gradient));
+    border-radius: 28px;
+    height: max(150px, 100px + 7vw);
+    margin-bottom: 5px;
+    transition: all .2s ease-in-out;
+    display: grid;
+    place-items: center;
+
+}
+.skillimg img {
+    width: 70%;
+}
+.skillcard:hover .skillimg{
+    border-radius: 50%;
+}
+.skillname {
+    color: var(--text);
+    text-align: center;
+    font-weight: 900;
+}
+
+@media (max-width: 680px) {
     #hero {
         flex-direction: column;
         padding-bottom: 48px;
