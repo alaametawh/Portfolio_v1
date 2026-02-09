@@ -389,6 +389,7 @@ body {
 .achivements .date {color: var(--text);}
 /* =========================================================== */
 /* contact */
+#contact {padding-bottom: 24px;}
 .contact {
     display: flex;
     gap: 50px;
@@ -433,7 +434,6 @@ textarea {
         flex-direction: column;
         align-items: center;
     }
-    #contact {padding-bottom: 24px;}
 }
 @media (max-width: 424px) {
     .sectionTitle {
