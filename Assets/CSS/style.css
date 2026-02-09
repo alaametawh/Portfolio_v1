@@ -334,6 +334,20 @@ body {
 
 /* About */
 #about {display: flex; flex-direction: column;}
+.about {display: flex; flex-direction: column;}
+.about .btn {display: block; align-self: center;}
+.about .btn i {
+    position: absolute;
+    color: var(--accent);
+    display: inline-block;
+    margin-left: 12px;
+    animation: download 1s ease-in-out infinite;
+}
+@keyframes download {
+    0%, 100% {top: 25%;}
+    50% {top: 50%;}
+}
+
 .skills {
     flex: 1;
     display: flex;
@@ -373,11 +387,53 @@ body {
 .achivements a {color: var(--accent) !important; font-size: 24px;}
 .achivements .projectImg {display: flex; justify-content: center;}
 .achivements .date {color: var(--text);}
+/* =========================================================== */
+/* contact */
+.contact {
+    display: flex;
+    gap: 50px;
+}
+i {margin-right: 16px;}
+.socials i {
+    font-size: 32px;
+    margin-top: 72px;
+}
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+form input, textarea {
+    background-color: transparent;
+    color: var(--text);
+    font-size: 21px;
+    outline: none;
+    border: 3px solid var(--text);
+    border-radius: 48px;
+    width: clamp(300px, 150px + 30vw, 800px);
+    padding: 16px 24px;
+    font-family: "Inter";
+    font-weight: 900;
+}
+textarea {
+    resize: vertical;
+}
 @media (max-width: 680px) {
     #hero {
         flex-direction: column;
         padding-bottom: 48px;
     }
+    .contact {flex-direction: column-reverse;}
+    .contact textarea, .contact input {width: 90%;}
+    .contactInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact {padding-bottom: 24px;}
 }
 @media (max-width: 424px) {
     .sectionTitle {

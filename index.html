@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Assets/imgs/logo.svg" type="image/svg+xml">
     <!-- CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
     <!-- External JS -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -52,6 +53,7 @@
             <div class="about">
                 <p class="header">I'M <span class="highlight">Alaaeldin M.</span></p>
                 <p class="text">I am a <span class="highlight">Computer Science</span> student at DU and a <span class="highlight">React Frontend Developer</span> dedicated to building <span class="highlight">interactive</span>, logic-driven web applications. My approach focuses on creating high-performance user experiences that prioritize functionality and seamless flow over pure visual design. While my current expertise is rooted in the frontend, I am focused on evolving into a <span class="highlight">Full Stack Developer</span>, consistently expanding my technical foundation to eventually master the entire <span class="highlight">web ecosystem</span>.</p>
+                <a href="./Assets/files/CV_2026.pdf" class="btn" target="_blank">Download CV<i class="fa-solid fa-arrow-down"></i></a>
             </div>
             <div class="header center sectionTitle">Education</div>
             <div class="education flexed">
@@ -184,6 +186,27 @@
          </div>
          <div id="contact" class="section">
             <div class="header center sectionTitle">CONTACT</div>
+            <div class="contact">
+                <div class="contactInfo">
+                    <p class="header">Alaaeldin M.</p>
+                    <a href="mailto:alaaeldin.dev@gmail.com" class="text"><i class="fa-solid fa-at"></i>alaaeldin@gmail.com</a>
+                    <p class="text"><i class="fa-solid fa-location-dot"></i>Damietta, Egypt</p>
+                    <p class="text"><i class="fa-solid fa-phone-flip"></i>01001854653</p>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/alaaeldin-m-a5813a326/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/alaametawh" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://wa.me/+201001854653" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form name="contact" data-netlify="true" data-netlify-honeypot="bot-feild" method="post" action="./thank_you.html">
+                    <input name="bot-feild" style="display: none;">
+                    <input type="text" name="userName" placeholder="Username..." required>
+                    <input type="email" name="userEmail" placeholder="Email..." required>
+                    <textarea name="userMessage" rows="8" placeholder="Whats in Your Mind ?" required></textarea>
+                    <input type="hidden" name="_redirect" value="thank_you.html">
+                    <button type="submit" class="btn">SUBMIT</button>
+                </form>
+            </div>
          </div>
     </div>
     <!-- JS -->

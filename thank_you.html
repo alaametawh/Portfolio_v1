@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <title>Thank You!</title>
+    <style>
+        body {height: 100dvh; display: flex;flex-direction: column; justify-content: center; align-items: center; background: var(--background);}
+        .btn {display: inline-block;}
+    </style>
+    <!-- Theme Toggle and Save -->
+     <script>
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.setAttribute("data-theme", systemTheme);
+    </script>
+</head>
+<body>
+    <p class="header center sectionTitle">THANK YOU!</p>
+    <p class="subheader center">Your message have been recieved.</p>
+    <a href="./index.html?#contact" class="btn">Back to website</a>
+</body>
+</html>
