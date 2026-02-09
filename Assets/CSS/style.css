@@ -54,6 +54,7 @@
     box-sizing: border-box;
     user-select: none;
     scroll-behavior: smooth;
+    scroll-padding-top: 150px;
 }
 a {
     text-decoration: none;
@@ -62,17 +63,115 @@ a {
 a:hover {color: var(--accent);}
 body {
     font-family: "Inter";
+    color: var(--text);
 }
 
 /* Reusable code */
 /* navbar */
+.flexed {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.center {text-align: center;}
+.sectionTitle {width: max-content; margin: 72px  0 !important; position: relative !important; align-self: center;}
+.sectionTitle::before, .sectionTitle::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 45%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--text);
+}
+.sectionTitle::before {left: -28px;}
+.sectionTitle::after {right:  -28px;}
+/* Show card */
+.showcard {
+    padding: 32px;
+    width: clamp(290px, 200px + 25vw, 650px);
+    background-image: linear-gradient(var(--gradient));
+    border-radius: 16px;
+    transition: all .2s ease-in-out;
+
+}
+.showcard:hover {border-radius: 16px 100px 16px 100px;}
+
+.date {font-size: 18px; font-weight: 900;color: var(--background);}
+.name {font-size: 32px; font-weight: 900; margin: 16px 0;}
+.place {font-size: 18px;font-weight: 900;color: var(--background);}
+.breif {font-size: 18px;font-weight: 600; margin-top: 28px;}
+/* ===================================== */
+/* Service card */
+.serviceCard {
+    padding: 24px;
+    width: clamp(290px, 200px + 25vw, 650px);
+    background-image: linear-gradient(var(--gradient));
+    border-radius: 16px;
+    transition: all .2s ease-in-out;
+    height: 350px;
+}
+.serviceCard:hover {border-radius: 16px 100px 16px 100px;}
+.serviceImg {
+    height: 150px;
+    width: 100%;
+}
+.serviceImg img {height: 100%;}
+/* ===================================== */
+/* Project card */
+.projectCard {
+    padding: 24px;
+    width: clamp(300px, 200px + 15vw, 650px);
+    background-image: linear-gradient(var(--gradient));
+    border-radius: 16px;
+    transition: all .2s ease-in-out;
+    min-height: 400px;
+}
+.projectCard:hover {border-radius: 16px 100px 16px 100px;}
+.projectImg {height: 200px; position: relative;}
+.projectImg img {height: 100%;}
+.tech {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 32px; 
+    font-weight: 900;
+}
+.tech > div {
+    padding: 10px 15px;
+    border-radius: 48px;
+    border: 3px solid;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+
+}
+.filter {
+    padding: 24px 24px 0 24px;
+    box-sizing: content-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -24px;
+    left: -24px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: var(--background);
+    backdrop-filter: blur(9.6px);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.projectCard:hover .filter {opacity: .9;}
+/* ===================================== */
 .navcircle {
     border-radius: 50%;
     width: 80px;
     height: 80px;
 }
 .section {
-    padding-top: 150px;
     min-height: 100dvh;
     width: 95%;
     display: flex;
@@ -100,7 +199,7 @@ body {
     color: var(--accent);
     width: max-content;
 }
-.text .highlight {border-bottom: 2px solid var(--accent)}
+.breif .highlight {font-weight: 900;}
 .typed-cursor {
     font-size: clamp(35px, 15px + 3vw, 115px);
     color: var(--accent);
@@ -187,6 +286,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 150px;
 }
 #hero {
     border-radius: 32px;
@@ -233,9 +333,9 @@ body {
 }
 
 /* About */
+#about {display: flex; flex-direction: column;}
 .skills {
     flex: 1;
-    margin-top: 72px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -258,7 +358,7 @@ body {
 
 }
 .skillimg img {
-    width: 70%;
+    width: 65%;
 }
 .skillcard:hover .skillimg{
     border-radius: 50%;
@@ -268,10 +368,21 @@ body {
     text-align: center;
     font-weight: 900;
 }
-
+/* work */
+.achivements .projectCard {display: flex;flex-direction: column; align-items: center; gap: 10px;}
+.achivements a {color: var(--accent) !important; font-size: 24px;}
+.achivements .projectImg {display: flex; justify-content: center;}
+.achivements .date {color: var(--text);}
 @media (max-width: 680px) {
     #hero {
         flex-direction: column;
         padding-bottom: 48px;
     }
+}
+@media (max-width: 424px) {
+    .sectionTitle {
+        width: 100%;
+    }
+    .sectionTitle::before {left: 0;}
+    .sectionTitle::after {right: 0;}
 }

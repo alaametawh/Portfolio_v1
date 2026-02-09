@@ -10,7 +10,7 @@ toggle_btn.addEventListener("click", () => {
 // Typing effect
 const typed = new Typed('.typed', {
   strings: [
-    "Web Developer",
+    "React Frontend Web Dev",
     "CS Student",
   ],
   typeSpeed: 40,
